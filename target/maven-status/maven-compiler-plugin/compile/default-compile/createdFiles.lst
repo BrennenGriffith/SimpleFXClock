@@ -1,0 +1,7 @@
+bg\clock\Clock.class
+bg\jfx\ChangeTime$TimeFormatSelection.class
+bg\jfx\About.class
+bg\jfx\ChangeTime.class
+bg\jfx\Controller$TimeState.class
+bg\jfx\Controller.class
+bg\jfx\MainClockView.class

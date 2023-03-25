@@ -1,0 +1,34 @@
+.bg-title {
+    -fx-font-size: 62;
+    -fx-fill: white;
+    -fx-stroke: rgb(70, 130, 180); /* Steel Blue */
+    -fx-stroke-width: 1.4;
+}
+
+.bg-time {
+    -fx-font-size: 62;
+    -fx-fill: white;
+    -fx-stroke: rgb(255, 215, 0); /* Gold */
+    -fx-stroke-width: 1.4;
+}
+
+.bg-am-pm {
+    -fx-font-size: 62;
+    -fx-fill: white;
+    -fx-stroke: rgb(144, 238, 144); /* Light Green */
+    -fx-stroke-width: 1.4;
+}
+
+.bg-vbox
+{
+    -fx-background-color: rgb(13, 40, 88);
+}
+
+.bg-edit .arrow
+{
+    -fx-shape: " ";
+}
+.bg-about .arrow
+{
+    -fx-shape: " ";
+}
