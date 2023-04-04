@@ -5,6 +5,7 @@ import java.time.LocalTime;
 /**
  * Clock will do everything clock related including printing
  * and logic.
+ * @author Brennen Griffith
  */
 public class Clock implements Runnable {
     /**
@@ -18,19 +19,20 @@ public class Clock implements Runnable {
      */
     public Clock()
     {
-        //when clock is created
+        //when clock is created, set now to the current local time
         now = LocalTime.now();
     }
+
     /**
-     *
+     * This method checks if the object passed in is equal to the current local time.
      * @param object This will typically be the instance of localTime
      * @return false indicates a change true is the same
      */
-
     public boolean equals(Object object)
     {
         if(object == this) return true;
-        //this is when it passes in local time
+
+        // Cast object to LocalTime and compare hour, minute, and second values
         if(object instanceof LocalTime c)
         {
             if(now.getHour() == c.getHour())
@@ -54,7 +56,9 @@ public class Clock implements Runnable {
     @Override
     public void run()
     {
+        // If current time has not changed, return without updating now
         if(!equals(now)) return;
+        // Update now with current local time
         now = LocalTime.now();
     }
 
@@ -91,10 +95,15 @@ public class Clock implements Runnable {
      */
     public String getAmPm()
     {
+        // Format current local time to retrieve AM/PM value
         return now.format(DateTimeFormatter.ofPattern("a"));
     }
 
 
+    /**
+     * Returns the current local time.
+     * @return now the current local time
+     */
     public LocalTime getNow()
     {return now;}
 
@@ -106,6 +115,7 @@ public class Clock implements Runnable {
     @Override
     public String toString()
     {
+        // Format current local time as a string
         return now.format(DateTimeFormatter.ofPattern("hh:mm:ss a"));
     }
 }

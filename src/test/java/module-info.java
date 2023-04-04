@@ -1,11 +1,10 @@
 module bg.jfxTest
 {
-    requires bg.jfx;
+    //requires bg;
+    requires bg;
+    requires org.testng;
+
     requires javafx.controls;
     requires javafx.graphics;
-    requires org.testng;
-    requires org.testfx.junit5;
 
-
-    exports bg.jfxTest;
 }

@@ -1,7 +1,11 @@
-bg\clock\Clock.class
-bg\jfx\ChangeTime$TimeFormatSelection.class
-bg\jfx\About.class
-bg\jfx\ChangeTime.class
-bg\jfx\Controller$TimeState.class
+bg\resources\Resources.class
 bg\jfx\Controller.class
+bg\alert\ChangeTime$TimeFormatSelection.class
+bg\clock\Clock.class
+bg\nodes\BGMenuBar.class
+module-info.class
+bg\alert\About.class
+bg\alert\ChangeTime.class
+bg\jfx\Controller$TimeState.class
 bg\jfx\MainClockView.class
+bg\jfx\ClockModel.class

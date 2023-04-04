@@ -32,3 +32,70 @@
 {
     -fx-shape: " ";
 }
+.bg-about-background
+{
+    -fx-background-color: rgb(13, 40, 88);
+}
+.bg-about-name
+{
+    -fx-fill: white;
+    -fx-stroke: rgb(70, 130, 180); /* Steel Blue */
+    -fx-font-size: 32;
+}
+.bg-about-hyperLink {
+  -fx-background-color: linear-gradient(to bottom, #4c4c4c 0%, #353535 100%);
+  -fx-background-radius: 5;
+  -fx-border-color: #fff;
+  -fx-border-radius: 5;
+  -fx-border-width: 1;
+  -fx-text-fill: #fff;
+  -fx-font-size: 16;
+  -fx-font-weight: bold;
+  -fx-padding: 10 18;
+  -fx-cursor: hand;
+}
+
+.bg-about-hyperLink:hover {
+  -fx-background-color: linear-gradient(to bottom, #353535 0%, #4c4c4c 100%);
+}
+.bg-about-header {
+    -fx-alignment: center;
+    -fx-font-size: 24pt;
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-effect: innershadow( two-pass-box , rgba(0,0,0,0.5) , 10, 0.0 , 4 , 4 );
+    -fx-background-color: linear-gradient(to bottom right, #526eaf, #7a2e85);
+    -fx-background-radius: 5px;
+    -fx-padding: 10px;
+}
+.bg-menu-button {
+    -fx-background-color: #f2f2f2;
+    -fx-background-radius: 5px;
+    -fx-padding: 5px 10px;
+    -fx-text-fill: #333333;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 3, 0.0, 1, 1); /* Add a box-shadow to create depth */
+}
+
+.bg-menu-button:hover {
+    -fx-background-color: #ff0000;
+    -fx-background-radius: 5px;
+    -fx-text-fill: #ffffff;
+}
+
+.bg-menu-button:pressed {
+    -fx-background-color: #d90000;
+    -fx-background-radius: 5px;
+    -fx-padding: 5px 10px;
+    -fx-text-fill: #ffffff;
+    -fx-background-insets: 2px;
+}
+.menu-bar {
+    -fx-background-color: #f2f2f2;
+    -fx-border-color: #f2f2f2;
+    -fx-border-width: 0 0 1px 0; /* Add a border at the bottom to blend with the menu buttons */
+}
+
+
+
+

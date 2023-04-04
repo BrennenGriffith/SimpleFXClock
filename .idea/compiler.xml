@@ -6,8 +6,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="SimpleDigitalClockFX" />
+        <module name="simpledigitalclockfx" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="SimpleDigitalClockFX" target="20" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="SimpleDigitalClockFX" options="--module-path C:\Users\Brenn\Documents\javafx-sdk-20\lib" />
+      <module name="simpledigitalclockfx" options="--module-path C:\Users\Brenn\Desktop\SimpleDigitalClockFX\target/dependency/ --add-modules javafx.controls,javafx.graphics" />
+    </option>
   </component>
 </project>

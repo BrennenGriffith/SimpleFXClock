@@ -6,6 +6,7 @@ import bg.clock.Clock;
 
 /**
  * Clock Model Holds The Entry Point of Creating the View Controller and Clock
+ * @author Brennen Griffith
  */
 public class ClockModel extends Application {
     /**
@@ -19,8 +20,14 @@ public class ClockModel extends Application {
     /**
      * Controller to control both the clock and the view
      */
-
     private Controller controller;
+    /**
+     *  The primary stage for this application, onto which the application scene can be set.
+     *  Applications may create other stages, if needed, but they will not be primary stages.
+     */
+    private Stage stage;
+
+
 
     /**
      * Main Method
@@ -42,6 +49,7 @@ public class ClockModel extends Application {
     @Override
     public void start(Stage stage) throws Exception
     {
+        this.stage = stage;
         //creating clock
         clock = new Clock();
         //creating the mvc
@@ -60,19 +68,35 @@ public class ClockModel extends Application {
         super.stop();
         //stop the task ending the program on close
         controller.stop();
-    }
-    //Generate Gettters
 
+    }
+
+    /**
+     * Get the main clock view
+     * @return the main clock view
+     */
     public MainClockView getClockView() {
         return clockView;
     }
-
+    /**
+     * Get the clock object
+     * @return the clock object
+     */
     public Clock getClock() {
         return clock;
     }
-
+    /**
+     * Get the controller object
+     * @return the controller object
+     */
     public Controller getController() {
         return controller;
     }
-
+    /**
+     * Get the primary stage
+     * @return the primary stage
+     */
+    public Stage getStage() {
+        return stage;
+    }
 }
