@@ -5,7 +5,7 @@ import javafx.stage.Stage;
 import bg.clock.ClockModel;
 
 /**
- * Clock Model Holds The Entry Point of Creating the View Controller and Clock
+ * This is the entry point that holds the clockModel model view and controller
  * @author Brennen Griffith
  */
 public class Entry extends Application {
@@ -14,11 +14,11 @@ public class Entry extends Application {
      */
     private MainClockView clockView;
     /**
-     * Logic for the clock that will be counted and displayed in the view
+     * Logic for the clockModel that will be counted and displayed in the view
      */
-    private ClockModel clock;
+    private ClockModel clockModel;
     /**
-     * Controller to control both the clock and the view
+     * Controller to control both the clockModel and the view
      */
     private Controller controller;
     /**
@@ -39,7 +39,7 @@ public class Entry extends Application {
     }
 
     /**
-     * Initialize Clock And Model-View-Controller
+     * Initialize clockModel And Model-View-Controller
      * @param stage the primary stage for this application, onto which
      * the application scene can be set.
      * Applications may create other stages, if needed, but they will not be
@@ -50,10 +50,10 @@ public class Entry extends Application {
     public void start(Stage stage) throws Exception
     {
         this.stage = stage;
-        //creating clock
-        clock = new ClockModel();
+        //creating clockModel
+        clockModel = new ClockModel();
         //creating the mvc
-        controller = new Controller(clock,clockView = new MainClockView(stage, controller), getHostServices());
+        controller = new Controller(clockModel,clockView = new MainClockView(stage, controller), getHostServices());
 
     }
 
@@ -72,18 +72,18 @@ public class Entry extends Application {
     }
 
     /**
-     * Get the main clock view
-     * @return the main clock view
+     * Get the main clockModel view
+     * @return the main clockModel view
      */
     public MainClockView getClockView() {
         return clockView;
     }
     /**
-     * Get the clock object
-     * @return the clock object
+     * Get the clockModel object
+     * @return the clockModel object
      */
     public ClockModel getClock() {
-        return clock;
+        return clockModel;
     }
     /**
      * Get the controller object

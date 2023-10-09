@@ -1,7 +1,4 @@
 # MVC Example
-
-![MVC Image](https://github.com/BrennenGriffith/SimpleFXClock/blob/main/src/main/resources/MVC%20PlantUML.png)
-
 This repository contains an example of the Model-View-Controller (MVC) pattern implemented in a Java application. The MVC pattern is a software design pattern that separates an application into three interconnected components: the model, the view, and the controller.
 
 ## ClockModel
