@@ -67,7 +67,7 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.8</version>
                 <configuration>
-                    <mainClass>bg.jfx.ClockModel</mainClass>
+                    <mainClass>bg.jfx.Entry</mainClass>
                 </configuration>
             </plugin>
             <plugin>
@@ -94,7 +94,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>bg.jfx.ClockModel</mainClass>
+                            <mainClass>bg.jfx.Entry</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

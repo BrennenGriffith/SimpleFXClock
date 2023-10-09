@@ -2,13 +2,13 @@ package bg.jfx;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
-import bg.clock.Clock;
+import bg.clock.ClockModel;
 
 /**
  * Clock Model Holds The Entry Point of Creating the View Controller and Clock
  * @author Brennen Griffith
  */
-public class ClockModel extends Application {
+public class Entry extends Application {
     /**
      *  View Class Everything javafx related
      */
@@ -16,7 +16,7 @@ public class ClockModel extends Application {
     /**
      * Logic for the clock that will be counted and displayed in the view
      */
-    private Clock clock;
+    private ClockModel clock;
     /**
      * Controller to control both the clock and the view
      */
@@ -51,7 +51,7 @@ public class ClockModel extends Application {
     {
         this.stage = stage;
         //creating clock
-        clock = new Clock();
+        clock = new ClockModel();
         //creating the mvc
         controller = new Controller(clock,clockView = new MainClockView(stage, controller), getHostServices());
 
@@ -82,7 +82,7 @@ public class ClockModel extends Application {
      * Get the clock object
      * @return the clock object
      */
-    public Clock getClock() {
+    public ClockModel getClock() {
         return clock;
     }
     /**

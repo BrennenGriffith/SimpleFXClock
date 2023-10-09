@@ -1,7 +1,6 @@
 
 import bg.jfx.*;
 import javafx.application.Platform;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import org.testng.annotations.BeforeClass;
@@ -21,7 +20,7 @@ import static org.testng.Assert.assertTrue;
 public class ClockModelTest {
 
 
-    private ClockModel clockModel;
+    private Entry clockModel;
 
     private Stage stage;
 
@@ -29,7 +28,7 @@ public class ClockModelTest {
     public void setUp() throws Exception{
         CountDownLatch latch = new CountDownLatch(1);
         Platform.startup(() ->{
-            clockModel = new ClockModel();
+            clockModel = new Entry();
             Stage stage = new Stage();
             try{
                 clockModel.start(stage);

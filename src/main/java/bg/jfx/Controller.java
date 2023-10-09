@@ -2,7 +2,7 @@ package bg.jfx;
 
 import bg.alert.About;
 import bg.alert.ChangeTime;
-import bg.clock.Clock;
+import bg.clock.ClockModel;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -14,7 +14,6 @@ import javafx.util.Duration;
 
 
 import java.time.format.DateTimeFormatter;
-import java.util.concurrent.*;
 
 /**
  * This class takes care of logic that has to do with
@@ -32,7 +31,7 @@ public class Controller {
     /**
      * Clock with clock logic
      */
-    private Clock clock;
+    private ClockModel clock;
     /**
      * View with view logic/ getter's
      */
@@ -50,7 +49,7 @@ public class Controller {
      * @param clock use clock logic
      * @param view  use view logic
      */
-    public Controller(Clock clock, MainClockView view, HostServices hostServices) {
+    public Controller(ClockModel clock, MainClockView view, HostServices hostServices) {
         this.clock = clock;
         this.view = view;
         this.hostServices = hostServices;
@@ -199,7 +198,7 @@ public class Controller {
      * @param clock            The Clock instance.
      * @return The time format pattern string.
      */
-    public static String getPatternHelper(TimeState currentTimeState, Clock clock) {
+    public static String getPatternHelper(TimeState currentTimeState, ClockModel clock) {
         String timeFormatPattern;
 
         if (currentTimeState == TimeState.MILITARY) {
@@ -217,7 +216,7 @@ public class Controller {
      * @param clock The Clock instance.
      * @return The time format pattern string for military time.
      */
-    private static String getMilitaryTimeFormat(Clock clock) {
+    private static String getMilitaryTimeFormat(ClockModel clock) {
         String timeFormatPattern = "H:mm:ss";
         if (clock.getNow().getHour() > 9)
             timeFormatPattern = "HH:mm:ss";
@@ -233,7 +232,7 @@ public class Controller {
      * @param clock The Clock instance.
      * @return The time format pattern string for standard time.
      */
-    private static String getStandardTimeFormat(Clock clock) {
+    private static String getStandardTimeFormat(ClockModel clock) {
         String timeFormatPattern = "h:mm:ss";
 
         if (clock.getNow().getHour() < 10 || (clock.getNow().getHour() > 12 && clock.getNow().getHour() <= 21)) {

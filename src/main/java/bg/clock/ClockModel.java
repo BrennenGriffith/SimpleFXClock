@@ -7,7 +7,7 @@ import java.time.LocalTime;
  * and logic.
  * @author Brennen Griffith
  */
-public class Clock implements Runnable {
+public class ClockModel implements Runnable {
     /**
      * now is the current time the depending on current Computer Clock
      */
@@ -17,7 +17,7 @@ public class Clock implements Runnable {
      * Clock Constructor
      * Just sets now
      */
-    public Clock()
+    public ClockModel()
     {
         //when clock is created, set now to the current local time
         now = LocalTime.now();
